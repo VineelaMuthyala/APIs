@@ -50,6 +50,7 @@ app.get('/books/:bookId/', async (request, response) => {
     WHERE
       book_id = ${bookId};`
   const book = await db.get(getBookQuery)
+  console.log(book)
   response.send(book)
 })
 // Add book API
